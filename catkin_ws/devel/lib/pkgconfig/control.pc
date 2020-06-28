@@ -1,0 +1,8 @@
+prefix=/home/pi/catkin_ws/devel
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs message_runtime tf tf2_ros urg_node joy rosbag rostopic rviz gmapping hector_mapping robot_pose_ekf

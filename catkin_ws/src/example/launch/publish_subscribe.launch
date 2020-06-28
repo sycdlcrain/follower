@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- VEHICLE TRACKING LAUNCH -->
+    <!--include file="$(find sensor_fusion)/launch/fusion.launch"/-->
+    <!--include file="$(find deepmap)/launch/deepmap_david.launch"/-->
+
+	<!-- PYTHON NODES -->
+        <node name="publish_subscribe" pkg="example" type="publish_subscribe" output="screen" respawn="true"/>
+
+<!--node name="republish" type="republish" pkg="image_transport" output="screen" args="compressed in:=/axis_camera raw out:=/axis_camera/image_raw" -->
+
+	<!-- TRAJECTORY STUFF -->
+
+    <!-- Always record motion planning data -->
+    <!--node
+        name="record_intersection"
+        pkg="rosbag"
+        type="record"
+        args="-o /hri/data/ /vehicle_state /vehicle_state_gps /tf /slice_cmp /lanelet /lanelet_viz /motion_planner_viz /ref_path /road_bound /ref_vel /tracked_objects /clicked_point /clock /cloud_detected_vehicles /cloud_ibeo_filtered /diagnostics /ibeo_node/cloud /initialpose /joint_states /marker_detected_vehicles /marker_filtered_vehicles /move_base_simple/goal /msg_comm /particle_bbox /particle_clouds /particle_clouds_array /pose_test_car /radar_FOV_far_L /radar_FOV_far_R /radar_FOV_near_L /radar_FOV_near_R /radar_pts /radar_scan_B /radar_scan_F /radar_scan_L /radar_scan_R /rosout /rosout_agg /sensor_clusters /tf /tf_static /vehicle_state /vehicle_state3D_gps /vehicle_state3D_gps_status /zenrin_map /ref_path
+/lanelet"
+    /-->
+
+</launch>
